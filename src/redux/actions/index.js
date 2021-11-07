@@ -23,9 +23,9 @@ export const searchByRegion = (region) => async (dispatch) => {
   let url;
 
   if (region === 'none') {
-    url = 'http://restcountries.com/v2/all';
+    url = 'http://restcountries.com/3.1/all';
   } else {
-    url = `https://restcountries.com/v2/continent/${region}`;
+    url = `https://restcountries.com/v3/region/${region}`;
   }
   const response = await fetch(url);
   const data = await response.json();

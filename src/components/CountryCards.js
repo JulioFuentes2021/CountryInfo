@@ -30,6 +30,8 @@ const CountryCards = () => {
     console.log(allCountries);
   }, []);
 
+  // Actualizar la api porque la v2 no funciona
+
   return (
     <ThemeProvider theme={onDarkMode ? DarkThemeBody : LightTheme}>
       <CardContainer>
