@@ -23,6 +23,7 @@ const CountryCards = () => {
   const countrySearched = useSelector((countries) => countries.countries.countrySearchedByUser);
   const countriesFiltered = allCountries.filter((item) => item.name.toLowerCase().includes(countrySearched.toLowerCase()));
   const onDarkMode = useSelector((store) => store.countries.darkMode);
+  console.log(countriesFiltered);
 
   useEffect(() => {
     dispatch(getCountries());
