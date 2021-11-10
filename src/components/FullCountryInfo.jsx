@@ -24,7 +24,7 @@ const FullCountryInfo = () => {
 
   return (
     prueba.map((item) => (
-      <ThemeProvider theme={onDarkMode ? DarkThemeHeader : LightTheme}>
+      <ThemeProvider key={item.name} theme={onDarkMode ? DarkThemeHeader : LightTheme}>
         <DarkModeManager />
         <FullInfoContainer>
           <FlagConatiner>

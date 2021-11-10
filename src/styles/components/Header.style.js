@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 export const HeaderSupreme = styled.div`
@@ -55,7 +56,7 @@ export const FilterSectionContainer = styled.div`
     display: flex;
     box-shadow: 0rem 0rem .2rem 0 #000;
     align-items: center;
-    margin: 0 4rem;
+    margin: 1rem 4rem;
     width: 100%;
     height: 3rem;
     background-color: ${(props) => props.theme.backgroundColor};
@@ -109,4 +110,9 @@ export const Input = styled.input.attrs((props) => ({
     &::placeholder {
         color: ${(props) => props.theme.color};
     }
+`;
+
+export const Title = styled(Link)`
+  color: ${(props) => props.theme.color};
+  text-decoration: none;
 `;

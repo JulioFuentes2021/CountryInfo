@@ -1,7 +1,10 @@
 import React from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
-import { HeaderContainer, HeaderItemsContainer, HeaderItems } from '../styles/components/Header.style';
+// import { Link } from 'react-router-dom';
+import {
+  HeaderContainer, HeaderItemsContainer, HeaderItems, Title,
+} from '../styles/components/Header.style';
 import { updateDarkMode } from '../redux/actions';
 
 const DarkModeManager = () => {
@@ -12,7 +15,9 @@ const DarkModeManager = () => {
     <HeaderContainer>
       <HeaderItemsContainer>
         <HeaderItems>
-          <h1>Where in the World?</h1>
+          <Title to="/">
+            <h1>Where in the World?</h1>
+          </Title>
         </HeaderItems>
       </HeaderItemsContainer>
       <HeaderItemsContainer isMoon onClick={() => dispatch(updateDarkMode())}>
