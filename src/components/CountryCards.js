@@ -55,7 +55,7 @@ const CountryCards = () => {
         <ThemeProvider key={item.name} theme={onDarkMode ? DarkThemeHeader : LightTheme}>
           <Link to={`/full/${item.name}`}>
             <Card>
-              <img loading="lazy" src={item.flag} alt="" />
+              <img src={item.flag} alt="" />
               <TitleCard>{item.name}</TitleCard>
               <FeatureCardContainer>
                 <FeatureContentContainer>

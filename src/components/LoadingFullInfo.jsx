@@ -1,8 +1,8 @@
 import React from 'react';
 import { RingPosition, Ring, RingItems } from '../styles/components/Loading.style';
 
-const Loading = () => (
-  <RingPosition>
+const LoadingFullInfo = () => (
+  <RingPosition isFullInfo>
     <Ring>
       <RingItems isBox1 />
       <RingItems isBox2 />
@@ -14,4 +14,4 @@ const Loading = () => (
 
 // color: ${(props) => props.theme.color};
 
-export default Loading;
+export default LoadingFullInfo;

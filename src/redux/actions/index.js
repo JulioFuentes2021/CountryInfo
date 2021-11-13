@@ -20,7 +20,7 @@ export const getCountries = () => async (dispatch) => {
 
     dispatch({
       type: 'prueba',
-      payload: await data,
+      payload: data,
     });
   } catch (error) {
     dispatch({
@@ -90,9 +90,18 @@ export const showFullInfo = (country) => async (dispatch) => {
     payload: true,
   });
 
-  const url = `https://restcountries.com/v2/name/${country}`;
-  const response = await fetch(url);
-  const data = await response.json();
+  let data;
+
+  try {
+    const url = `https://restcountries.com/v2/name/${country}`;
+    const response = await fetch(url);
+    data = await response.json();
+  } catch (error) {
+    dispatch({
+      type: 'error',
+      payload: true,
+    });
+  }
 
   dispatch({
     type: 'searchFullInfo',

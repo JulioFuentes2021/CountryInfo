@@ -6,24 +6,34 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import DarkModeManager from './DarkModeManager';
 import { showFullInfo } from '../redux/actions';
+import LoadingFullInfo from './LoadingFullInfo';
 import { FullInfoContainer, FlagConatiner, InfoItems, InfoSections, InfoSectionsContainer } from '../styles/FullCountryInfo.style';
 import { TitleCard, FeatureContentContainer, FeatureCardItemTitle } from '../styles/components/CountryCards.style';
-import { DarkThemeHeader, LightTheme } from '../styles/LightAndDarkMode.style';
+import { DarkThemeHeader, LightTheme, DarkThemeBody } from '../styles/LightAndDarkMode.style';
 
 const FullCountryInfo = () => {
   const { country } = useParams();
   console.log(useParams);
   const dispatch = useDispatch();
-  const prueba = useSelector((store) => store.countries.FullInfo);
+  const fullInfo = useSelector((store) => store.countries.FullInfo);
   const onDarkMode = useSelector((store) => store.countries.darkMode);
+  const { loading } = useSelector((store) => store.countries);
 
   useEffect(() => {
     dispatch(showFullInfo(country));
-    console.log(prueba);
+    console.log(fullInfo);
   }, []);
 
+  if (loading) { // tesseract
+    return (
+      <ThemeProvider theme={onDarkMode ? DarkThemeBody : LightTheme}>
+        <LoadingFullInfo />
+      </ThemeProvider>
+    );
+  }
+
   return (
-    prueba.map((item) => (
+    fullInfo.map((item) => (
       <ThemeProvider key={item.name} theme={onDarkMode ? DarkThemeHeader : LightTheme}>
         <DarkModeManager />
         <FullInfoContainer>
