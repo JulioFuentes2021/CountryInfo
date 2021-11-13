@@ -12,6 +12,4 @@ const Loading = () => (
   </RingPosition>
 );
 
-// color: ${(props) => props.theme.color};
-
 export default Loading;

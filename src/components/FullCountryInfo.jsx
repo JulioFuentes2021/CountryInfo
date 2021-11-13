@@ -13,7 +13,6 @@ import { DarkThemeHeader, LightTheme, DarkThemeBody } from '../styles/LightAndDa
 
 const FullCountryInfo = () => {
   const { country } = useParams();
-  console.log(useParams);
   const dispatch = useDispatch();
   const fullInfo = useSelector((store) => store.countries.FullInfo);
   const onDarkMode = useSelector((store) => store.countries.darkMode);
@@ -21,10 +20,9 @@ const FullCountryInfo = () => {
 
   useEffect(() => {
     dispatch(showFullInfo(country));
-    console.log(fullInfo);
   }, []);
 
-  if (loading) { // tesseract
+  if (loading) {
     return (
       <ThemeProvider theme={onDarkMode ? DarkThemeBody : LightTheme}>
         <LoadingFullInfo />

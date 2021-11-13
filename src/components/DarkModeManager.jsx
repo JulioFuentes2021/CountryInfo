@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
 import {
   HeaderContainer, HeaderItemsContainer, HeaderItems, Title,
 } from '../styles/components/Header.style';

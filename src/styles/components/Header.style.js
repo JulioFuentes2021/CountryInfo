@@ -64,12 +64,6 @@ export const FilterSectionContainer = styled.div`
     @media screen and (min-width:1024px) {
         width: 30%;
     }
-
-    /* ${({ isSelection }) => isSelection
-        && css`
-        width: 100%;
-        max-width: 15rem;
-    `} */
 `;
 
 export const FilterItem = styled.span`

@@ -44,10 +44,6 @@ export const InfoSections = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 1rem;
-
-  /* @media screen and (min-width: 1024px) {
-    flex-direction: row;
-  } */
 `;
 
 export const InfoSectionsContainer = styled.section`

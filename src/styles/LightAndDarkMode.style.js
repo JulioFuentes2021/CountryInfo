@@ -5,8 +5,6 @@ export const DarkThemeHeader = {
   transition: 'color, background-color 1s ease',
 };
 
-// DarkMode for the body = 0E131C;
-
 export const LightTheme = {
   color: '#000',
   backgroundColor: '#fff',

@@ -29,10 +29,8 @@ const CountryCards = () => {
 
   useEffect(() => {
     dispatch(getCountries());
-    console.log(loading, error);
   }, []);
 
-  // Actualizar la api porque la v2 no funciona
   if (loading) {
     return (
       <ThemeProvider theme={onDarkMode ? DarkThemeBody : LightTheme}>

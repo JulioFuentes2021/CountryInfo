@@ -12,6 +12,4 @@ const LoadingFullInfo = () => (
   </RingPosition>
 );
 
-// color: ${(props) => props.theme.color};
-
 export default LoadingFullInfo;
