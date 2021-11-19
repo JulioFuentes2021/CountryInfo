@@ -14,7 +14,7 @@ const DarkModeManager = () => {
     <HeaderContainer>
       <HeaderItemsContainer>
         <HeaderItems>
-          <Title to="/">
+          <Title to="/CountryInfo">
             <h1>Where in the World?</h1>
           </Title>
         </HeaderItems>
