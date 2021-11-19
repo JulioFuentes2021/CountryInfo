@@ -7,7 +7,7 @@ import FullCountryInfo from '../components/FullCountryInfo';
 const App = () => (
   <Router>
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/CountryInfo" component={Home} />
       <Route exact path="/full/:country" component={FullCountryInfo} />
       <Route component={Error} />
     </Switch>
